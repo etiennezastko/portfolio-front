@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "akira";
+  src: url("../../font/akirabold.ttf");
+}
+ù
+  /* audio {
+      display: flex;
+      flex-direction: row;
+    } */
+  
+
+body {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#drag,
+#spin {
+  position: relative;
+  display: flex;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+}
+
+#drag img {
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  text-align: center;
+  box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, #0005);
+}
+
+#drag img:hover {
+  box-shadow: 0 0 15px #fffd;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, #0007);
+}
+
+#ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background-image: url(../images/xerrranth.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1920px;
+  height: 100vh;
+}
+
+.title-home {
+  color: #f55115b4;
+  font-family: "akira";
+  font-size: 2.5rem;
+  letter-spacing: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+
+.title-home:hover {
+  color: #9cd147a6;
+}
+
+span {
+  opacity: 0;
+  transition: all 8s ease;
+}
+
+span.fade {
+  opacity: 1;
+}
+
+.mobile-home {
+  display: none;
+}
+
+.container {
+  display: flex;
+  height: 88vh;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 964px) {
+  .background {
+    background-image: url(../images/xerranth-mobile.svg);
+    background-position: center no-repeat no-repeat;
+    background-size: cover;
+    max-width: 900px;
+  }
+
+  #drag img {
+    transform-style: preserve-3d;
+    left: 70%;
+    top: 0%;
+    width: 50%;
+    height: 50%;
+    line-height: 200px;
+    text-align: left;
+    box-shadow: 0 0 8px #fff;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #0005);
+  }
+
+  #ground {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+  }
+}

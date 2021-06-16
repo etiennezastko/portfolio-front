@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "akira";
+  src: url("../../font/akirabold.ttf");
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  font-family: "akira";
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 5rem;
+}
+
+.nav-1:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+footer > a {
+  display: block;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  color: #f55115b4;
+  margin: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer > a :hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+@media all and (max-width: 964px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
